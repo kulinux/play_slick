@@ -3,11 +3,13 @@ package controllers
 import javax.inject.Inject
 
 import models.Work
-import play.api.libs.json.Json.obj
+import play.api.libs.json.Json._
 import play.api.libs.json.{JsError, JsValue, Json}
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.mvc.{Action, Controller}
 import repo.WorkRepository
 import utils.Constants
+import utils.JsonFormat._
 
 import scala.concurrent.Future
 
